@@ -191,3 +191,30 @@ a:hover {
 .footer-link:hover {
   text-decoration: underline; 
 }
+
+/* Add this to your existing CSS */
+@media (max-width: 768px) {
+  .text-container {
+    width: 90%; /* Use more width on smaller screens */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .app-icon {
+    width: 60px; /* Adjust icon size for mobile */
+  }
+
+  .app-screenshot {
+    width: 100%; /* Make screenshot responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .badge-container {
+    flex-direction: column; /* Stack badges vertically */
+    align-items: center; /* Center badges */
+  }
+
+  .footer-links {
+    flex-direction: column; /* Stack footer links vertically */
+    align-items: center; /* Center footer links */
+  }
+}
