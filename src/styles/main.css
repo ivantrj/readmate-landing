@@ -6,7 +6,7 @@
 }
 
 :root {
-  --accent: #FF9305;
+  --accent: #6B35E8;
   --secondary: #8e8e93;
 }
 
@@ -175,4 +175,19 @@ a {
 
 a:hover {
   text-decoration: none; /* Remove underline on hover */
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-link {
+  font-size: 0.8rem; 
+  color: var(--secondary); 
+  text-decoration: none; 
+}
+
+.footer-link:hover {
+  text-decoration: underline; 
 }
