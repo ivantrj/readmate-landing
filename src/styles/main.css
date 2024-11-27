@@ -100,6 +100,9 @@ main {
 
 .authors {
   font-weight: 300;
+  text-align: right;
+  width: 100%;
+  margin-top: 60px;
 }
 
 .authors a {
@@ -256,4 +259,27 @@ a:hover {
     flex-direction: column; /* Stack footer links vertically */
     align-items: center; /* Center footer links */
   }
+}
+
+.badge-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.badge-disabled {
+  position: relative;
+  cursor: not-allowed;
+}
+
+.badge.disabled {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.coming-soon {
+  display: block;
+  text-align: center;
+  color: var(--secondary);
+  font-size: 0.9em;
+  margin-top: 4px;
 }

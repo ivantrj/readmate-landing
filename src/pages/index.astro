@@ -10,11 +10,14 @@ const badges = [
   {
     link: "https://apps.apple.com/pl/developer/ivan-trajanovski/id1718049049",
     image: "/images/app-store-badge.svg",
+    disabled: false
   },
-  // {
-  //   link: "https://play.google.com/store/apps/details?id=com.readmate",
-  //   image: "/images/google-play-badge.png",
-  // },
+  {
+    link: "https://play.google.com/store/apps/details?id=com.readmate",
+    image: "/images/google-play-badge.png",
+    disabled: true,
+    comingSoon: "Coming to Android soon"
+  },
 ];
 const authors = [
   {
@@ -76,10 +79,17 @@ const favicon = "/images/favicon.ico";
           <div class="badge-container">
             {
               badges.map((badge) => (
-                <div>
-                  <a href={badge.link} target="_blank">
-                    <img src={badge.image} class="badge" />
-                  </a>
+                <div class="badge-wrapper">
+                  {!badge.disabled ? (
+                    <a href={badge.link} target="_blank">
+                      <img src={badge.image} class="badge" />
+                    </a>
+                  ) : (
+                    <div class="badge-disabled">
+                      <img src={badge.image} class="badge disabled" />
+                      <span class="coming-soon">{badge.comingSoon}</span>
+                    </div>
+                  )}
                 </div>
               ))
             }
